@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HiT1an ✦ 个人主页 / Portfolio" />
+    <title>HiT1an ✦ 个人主页</title>
+    <!-- 该脚本置于 head 以在 React 挂载前尽快设置主题，避免首屏白屏闪烁 -->
+    <script>
+      ;(function () {
+        try {
+          var theme = localStorage.getItem('hit1an-theme')
+          var resolved = theme
+          if (!theme || theme === 'system') {
+            resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', resolved)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="./assets/index-Nc6cxWcH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CKIZi7Go.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
